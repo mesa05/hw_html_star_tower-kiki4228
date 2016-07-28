@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>星星塔</title>
+	
+<script>
+
+function Button1_onclick() {
+
+    var line = "";
+	for(var i = 0 ; i < txt1.value ; i++) {
+		for(var j=i; j<txt1.value ; j++){
+		line += "*";
+	}
+	for(var k = 0;k<=i;k++){
+    	line += "&nbsp";	
+    }
+        line += "<br>"
+    }
+        debug.innerHTML = line;
+}
+
+</script>
+
+
+</head>
+<body>
+ 	輸入想要的階層數:
+	<input type="text" id="txt1" name="txt1" value="請改成任意數字" PlaceHolder="Keyin something" size="40">
+	<br><br>
+	<input type="button" id="Button1" name="Button1"   
+		value="點我一下，製造星星塔" onclick="Button1_onclick()">
+	<br><br>
+    結果顯示如下:
+    <INPUT type="text" id="txt2" name="txt2" value="Result" size="40">
+    <br>
+    <div id="debug"></div>
+</body>
+</html>
